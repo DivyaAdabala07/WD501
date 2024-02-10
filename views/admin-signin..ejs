@@ -8,6 +8,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="csrf-token" content="<%= csrfToken%>">
     <title><%= title %></title>
+    <style>
+        body {
+            background-color: #f2f5f8;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .grid {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="grid grid-cols-6">
@@ -28,7 +41,7 @@
                     <button type="submit" class="text-white bg-green-600 hover:bg-green-800 font-medium rounded px-5 py-2">Sign in</button>
                 </div>
             </form>
-            <p>Don't have an account yet? <a href="/signup" class="text-green-600">Sign up</a></p>
+            <p>Don't have an account yet? <a href="/signup" class="text-blue-600">Sign up</a></p>
             <%-include("notifications.ejs")%>
         </div>
     </div>
