@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="<%= csrfToken%>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title><%= title %></title>
+    <style>
+        body {
+            background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220217/pngtree-colorful-sports-theme-background-material-image_944423.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0; 
+        }
+
+        .grid {
+            width: 100%; 
+        }
+
+        .col-start-3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .col-span-2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid grid-cols-6">
+        <div class="col-start-3 col-span-2">
+            <%- include("header.ejs") %>
+            <p class="py-2 font-bold text-xl text-brown-800">Welcome to the Sports-Scheduler</p>
+            <p class="py-2">New here? <a href="/signup" class="text-blue-600">Sign-up now</a></p>
+            <p class="py-2">Already have an account? <a href="/signin" class="text-blue-600">Sign-in</a></p>
+        </div>
+    </div>
+</body>
+</html>
